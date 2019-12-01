@@ -3,9 +3,15 @@
 
     class Employee
     {
-        public $name;
-        public $age;
-        public $salary;
+        private $name;
+        private $age;
+        private $salary;
+
+        public function __construct(string $name, int $age, int $salary) {
+            $this->name = $name;
+            $this->age = $this->isAgeCorrect($age) ? $age : 18;
+            $this->salary = $salary;
+        }
 
         public function getName(): string {
             return $this->name;
@@ -19,13 +25,13 @@
             return $this->salary;
         }
 
-        public function checkAge(int $age):bool {
-            return $age > 18;
-        }
-
         public function doubleSalary(): Employee {
             $this->salary *= 2;
 
             return $this;
+        }
+
+        private function isAgeCorrect(int $age):bool {
+            return $age > 18;
         }
     }
