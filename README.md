@@ -7,7 +7,7 @@
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://clck.ru/KYeDq">
             Методы. Параметры методов.
         </a>
     </li>
