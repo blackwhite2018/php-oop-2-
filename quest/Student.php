@@ -1,13 +1,14 @@
 <?php
     declare(strict_types = 1);
 
-    class Student
+    require_once DIR.'/quest/User.php';
+
+    class Student extends User
     {
-        private $name;
         private $course;
 
         public function __construct(string $name) {
-            $this->name = $name;
+            parent::__construct($name);
             $this->course = 1;
         }
 

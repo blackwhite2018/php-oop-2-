@@ -42,13 +42,18 @@
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://clck.ru/KYh8j">
             Название метода из переменной.
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://clck.ru/KYh9W">
             Цепочки методов.
+        </a>
+    </li>
+    <li>
+        <a href="">
+            Наследование.
         </a>
     </li>
 </ol>

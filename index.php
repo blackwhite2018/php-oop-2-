@@ -10,11 +10,11 @@
     // Дебагинг (выстрел в ногу)
     require_once DIR.'/lib/debug.php';
 
-    require_once DIR.'/quest/Arr.php';
+    require_once DIR.'/quest/Employee.php';
+    require_once DIR.'/quest/Student.php';
 
-    $arr = new Arr;
+    $employee = new Employee('Вася', 25, 1000);
+    echo $employee->getName();
 
-    $array = [2, 1, 7];
-    $arr->append(1, 4, 6)->append(...$array);
-
-    debug($arr->get());
+    $student = new Student('Петя');
+    echo $student->getName();
