@@ -10,11 +10,19 @@
     // Дебагинг (выстрел в ногу)
     require_once DIR.'/lib/debug.php';
 
-    require_once DIR.'/quest/Arr.php';
+    require_once DIR.'/quest/City.php';
 
-    $arr = new Arr;
-    $arr->add([1, 2, 1]);
-    $arr->add([4, 7, 3]);
+    $city = new City('Москва', 11500000, 1147);
 
-    printf("%.2f", $arr->avg());
+    $props = [
+        'name',
+        'population',
+        'foundation'
+    ];
+
+    foreach($props as $prop) {
+        echo $city->$prop . '<br />';
+    }
+
+    
     

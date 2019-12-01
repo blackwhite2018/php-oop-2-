@@ -3,12 +3,14 @@
 
     class City
     {
-        private $name;
-        private $population;
+        public $name;
+        public $population;
+        public $foundation;
 
-        public function __construct(string $name, int $population) {
+        public function __construct(string $name, int $population, int $foundation) {
             $this->name = $name;
             $this->population = $population;
+            $this->foundation = $foundation;
         }
 
         public function getName(): string {
