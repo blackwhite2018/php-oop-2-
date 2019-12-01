@@ -6,4 +6,20 @@
         public $name;
         public $age;
         public $salary;
+
+        public function getName(): string {
+            return $this->name;
+        }
+
+        public function getAge(): int {
+            return $this->age;
+        }
+
+        public function getSalary(): int {
+            return $this->salary;
+        }
+
+        public function checkAge(int $age):bool {
+            return $age > 18;
+        }
     }
