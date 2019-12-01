@@ -14,3 +14,11 @@
     $employee2 -> salary = 2000;
     
     printf("Сумма зарплат: %d", $employee1->getSalary() + $employee2->getSalary());
+
+
+    require_once __DIR__.'/quest/User.php';
+
+    $user = new User;
+    $user->setAge(21);
+
+    printf("<br />Возраст: %d", $user->age);
