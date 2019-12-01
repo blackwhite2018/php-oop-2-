@@ -6,6 +6,11 @@
         private $name;
         private $age;
 
+        public function __construct(string $name, int $age = 18) {
+            $this->name = $name;
+            $this->setAge($age);
+        }
+
         public function setAge(int $age): User {
             if ($this->isAgeCorrect($age)) {
                 $this->age = $age;
@@ -20,6 +25,14 @@
             }
 
             return $this;
+        }
+
+        public function getName(): string {
+            return $this->name;
+        }
+
+        public function getAge(): int {
+            return $this->age;
         }
 
         private function isAgeCorrect(int $age): bool {

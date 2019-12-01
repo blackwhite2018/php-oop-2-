@@ -10,18 +10,17 @@
     // Дебагинг (выстрел в ногу)
     require_once DIR.'/lib/debug.php';
 
-    require_once DIR.'/quest/City.php';
+    require_once DIR.'/quest/User.php';
 
-    $city = new City('Москва', 11500000, 1147);
+    $user = new User('Валерий');
 
-    $props = [
-        'name',
-        'population',
-        'foundation'
+    $methods = [
+        'method1' => 'getName',
+        'method2' => 'getAge'
     ];
 
-    foreach($props as $prop) {
-        echo $city->$prop . '<br />';
+    foreach($methods as $method) {
+        echo $user->$method();
     }
 
     
