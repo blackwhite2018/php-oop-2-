@@ -19,6 +19,17 @@
     require_once __DIR__.'/quest/User.php';
 
     $user = new User;
-    $user->setAge(21);
+    $user->name = 'Коля';
+    $user->age = 25;
+
+    $user->setAge(30);
 
     printf("<br />Возраст: %d", $user->age);
+
+    require_once __DIR__.'/quest/Rectangle.php';
+
+    $rectangle = new Rectangle;
+    $rectangle->width = 4;
+    $rectangle->height = 6;
+
+    printf("<br />Площадь: %.0f<br />Периметр: %.0f", $rectangle->square(), $rectangle->perimeter());

@@ -22,4 +22,10 @@
         public function checkAge(int $age):bool {
             return $age > 18;
         }
+
+        public function doubleSalary(): Employee {
+            $this->salary *= 2;
+
+            return $this;
+        }
     }
