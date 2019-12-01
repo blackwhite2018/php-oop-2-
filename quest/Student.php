@@ -4,17 +4,26 @@
     class Student
     {
         private $name;
-        private $course = 1;
+        private $course;
+
+        public function __construct(string $name) {
+            $this->name = $name;
+            $this->course = 1;
+        }
 
         public function transferToNextCourse(): Student {
-            if ($this->isTransferToNextCourseCorrect($course + 1)) {
+            if ($this->isTransferToNextCourseCorrect($this->course + 1)) {
                 $this->course++;
             }
 
             return $this;
         }
 
+        public function getCourse(): int {
+            return $this->course;
+        }
+
         private function isTransferToNextCourseCorrect(int $course): bool {
-            return $course >= 1 && $course <= 5;
+            return $course <= 5;
         }
     }
