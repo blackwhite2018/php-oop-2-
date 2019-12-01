@@ -5,8 +5,8 @@
     {
         private $collection = [];
 
-        public function add(array $arr): Arr {
-            $this->collection = array_merge($this->collection, $arr);
+        public function append(...$params): Arr {
+            array_push($this->collection, ...$params);
 
             return $this;
         }

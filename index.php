@@ -10,18 +10,11 @@
     // Дебагинг (выстрел в ногу)
     require_once DIR.'/lib/debug.php';
 
-    require_once DIR.'/quest/User.php';
+    require_once DIR.'/quest/Arr.php';
 
-    $user = new User('Валерий');
+    $arr = new Arr;
 
-    $methods = [
-        'method1' => 'getName',
-        'method2' => 'getAge'
-    ];
+    $array = [2, 1, 7];
+    $arr->append(1, 4, 6)->append(...$array);
 
-    foreach($methods as $method) {
-        echo $user->$method();
-    }
-
-    
-    
+    debug($arr->get());
