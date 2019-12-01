@@ -1,17 +1,20 @@
 <?php
     declare(strict_types = 1);
 
-    require_once __DIR__.'/quest/Student.php';
+    // Режим разработки (development | production)
+    define('MODE', 'development');
 
-    $student = new Student('Коля');
+    // Корневая директория
+    define('DIR', __DIR__);
 
-    printf("Курс: %d<br />", $student->getCourse());
-    $student->transferToNextCourse();
-    printf("Курс: %d<br />", $student->getCourse());
-    $student->transferToNextCourse();
-    $student->transferToNextCourse();
-    $student->transferToNextCourse();
-    printf("Курс: %d<br />", $student->getCourse());
-    $student->transferToNextCourse();
-    printf("Курс: %d<br />", $student->getCourse());
+    // Дебагинг (выстрел в ногу)
+    require_once DIR.'/lib/debug.php';
+
+    require_once DIR.'/quest/Arr.php';
+
+    $arr = new Arr;
+    $arr->add([1, 2, 1]);
+    $arr->add([4, 7, 3]);
+
+    printf("%.2f", $arr->avg());
     
