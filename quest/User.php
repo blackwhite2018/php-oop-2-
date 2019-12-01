@@ -3,18 +3,26 @@
 
     class User
     {
-        public $name;
-        public $age;
+        private $name;
+        private $age;
 
         public function setAge(int $age): User {
-            if ($this->checkAge($age)) {
+            if ($this->isAgeCorrect($age)) {
                 $this->age = $age;
             }
 
             return $this;
         }
 
-        public function checkAge(int $age): bool {
-            return $age >= 18;
+        public function addAge(int $year): User {
+            if ($this->isAgeCorrect($age + $year)) {
+                $this->age += $year;
+            }
+
+            return $this;
+        }
+
+        private function isAgeCorrect(int $age): bool {
+            return $age >= 18 && $age <= 60;
         }
     }
